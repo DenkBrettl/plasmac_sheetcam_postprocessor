@@ -1,0 +1,91 @@
+[Tool0]
+Type=CodeTool
+Name=THC-Disable
+Comment=
+Tool\ number=268435457
+Code=M62 P2  (THC disable)
+[Tool1]
+Type=CodeTool
+Name=THC-Enable
+Comment=
+Tool\ number=268435458
+Code=M63 P2 (THC enable)
+[Tool2]
+Type=CodeTool
+Name=Torch Disable
+Comment=
+Tool\ number=268435461
+Code=M62 P3  (Torch Disable)
+[Tool3]
+Type=CodeTool
+Name=Torch Enable
+Comment=
+Tool\ number=268435462
+Code=M63 P3  (Torch Enable)
+[Tool4]
+Type=CodeTool
+Name=Velocity 100%
+Comment=
+Tool\ number=268435460
+Code=M67 E3 Q0 (Velocity 100%)
+[Tool5]
+Type=CodeTool
+Name=Velocity 60%
+Comment=
+Tool\ number=268435459
+Code=M67 E3 Q60 (Velocity 60%)
+[pathRules]
+GlobalRule=-1
+[pathRules/Set0]
+name=THC Off Before End
+[pathRules/Set0/Rule0]
+Class=PathRuleBeforeEnd
+Feed\ rate=1
+Start\ code=268435457
+End\ code=-1
+Enabled=1
+Distance=14
+Include\ leadout=0
+[pathRules/Set0/Rule1]
+Class=PathRuleBeforeEnd
+Feed\ rate=1
+Start\ code=268435458
+End\ code=-1
+Enabled=1
+Distance=0
+Include\ leadout=1
+[pathRules/Set1]
+name=Holes 60% Feed
+[pathRules/Set1/Rule0]
+Class=PathRuleOnCircle
+Feed\ rate=0.6
+Start\ code=268435459
+End\ code=-1
+Enabled=1
+Smaller\ than=32
+[pathRules/Set1/Rule1]
+Class=PathRuleBeforeEnd
+Feed\ rate=1
+Start\ code=268435460
+End\ code=-1
+Enabled=1
+Distance=0
+Include\ leadout=1
+[pathRules/Set2]
+name=Torch Off Before End
+[pathRules/Set2/Rule0]
+Class=PathRuleBeforeEnd
+Feed\ rate=1
+Start\ code=268435461
+End\ code=-1
+Enabled=1
+Distance=0.5
+Include\ leadout=0
+[pathRules/Set2/Rule1]
+Class=PathRuleBeforeEnd
+Feed\ rate=1
+Start\ code=268435462
+End\ code=-1
+Enabled=1
+Distance=0
+Include\ leadout=0
