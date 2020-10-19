@@ -1,7 +1,7 @@
 # plasmac_sheetcam_postprocessor
 A SheetCam PostProcessor for the LinuxCNC PlasmaC configuration
 
-SheetCam PP for Plasmac (PlasmaC.scpost)
+SheetCam PP for Plasmac (plasmac.scpost)
 
 *** REQUIRED SETTINGS IN SHEETCAM ***
 <br>Navigate to Options >> Job options >> Tool change and deselect Use X, Use Y and Use Z 
@@ -35,7 +35,7 @@ You will also need tool number 1 in the LinuxCNC tool table set with the correct
 
 ------------------------------------------------------------------------------------------------
 
-SheetCam Tool File for Plasmac (PlasmaC.tools)
+SheetCam Tool File for Plasmac (plasmac.tools)
 <br>The tool file only has code snippets and cut rules.
 
 You could either:
