@@ -20,6 +20,7 @@ noArcs      = 0 -- set to 1 to convert arcs to line segments
 
 revNum  = 'F'
 revDate = 'May 15 2020'
+assert(os.setlocale('C'))
 
 if cParms == 1 then
     post.DefineCustomToolParam('PlasmaTool', 'Puddle jump height', 'pjHeight', sc.unit1DECPLACE, 0, 0, 200)
